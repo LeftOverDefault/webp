@@ -1,42 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/style.css">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Document</title>
-	<script src="https://kit.fontawesome.com/36275107a2.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="./css/style.css" />
 </head>
+
 <body>
 	<header>
-		<div class="navbar">
-			<div class="logo"><a href="#">LOGO</a></div>
-			<ul class="links">
-				<li><a href="#">Link</a></li>
-				<li><a href="#">Link</a></li>
-				<li><a href="#">Link</a></li>
-				<li><a href="#">Link</a></li>
-			</ul>
-			<a href="#" class="action-btn">Lorem, ipsum.</a>
-			<div class="toggle-btn">
-				<i class="fa-solid fa-bars"></i>
-			</div>
-		</div>
-		<div class="dropdown-menu">
-			<li><a href="#">Link</a></li>
-			<li><a href="#">Link</a></li>
-			<li><a href="#">Link</a></li>
-			<li><a href="#">Link</a></li>
-			<li><a href="#" class="action-btn">Lorem, ipsum.</a></li>
-		</div>
+		<h2 class="logo">OSS</h2>
+		<nav class="navbar">
+			<a class="home-btn" href="#">Home</a>
+			<a class="about-btn" href="#">About</a>
+			<a class="software-btn" href="#">Software</a>
+			<a class="contact-btn" href="#">Contact</a>
+			<a class="contribute-btn" href="#">Contribute</a>
+			<button class="btn-login-popup">Login</button>
+		</nav>
 	</header>
-	<main>
-		<section id="hero">
-			<h1>Welcome</h1>
-			<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis, sed!</p>
-		</section>
-	</main>
-	<script src="js/main.js"></script>
+
+	<div class="landing">
+		<h1>Welcome!</h1>
+	</div>
+
+	<div class="main">
+		<div class="about">
+			<h2>About Us</h2>
+		</div>
+	</div>
+
+	<div class="wrapper">
+		<span class="icon-close">
+			<ion-icon name="close"></ion-icon>
+		</span>
+
+		<div class="form-box login">
+			<h2>Login</h2>
+			<form action="#">
+				<div class="input-box">
+					<span class="icon">
+						<ion-icon name="mail"></ion-icon>
+					</span>
+					<input id="login-email" type="email" required />
+					<label>Email</label>
+				</div>
+				<div class="input-box">
+					<span class="icon">
+						<ion-icon name="lock-closed"></ion-icon>
+					</span>
+					<input id="login-password" type="password" required />
+					<label>Password</label>
+				</div>
+				<div class="remember-forgot">
+					<label>
+						<input type="checkbox">Remember me
+					</label>
+					<a href="#">Forgot Password?</a>
+				</div>
+				<button type="submit" class="btn" onclick="checkData()">Login</button>
+				<div class="login-register">
+					<p>Don't have an account?
+						<a href="#" class="register-link">Register</a>
+					</p>
+				</div>
+			</form>
+		</div>
+
+		<div class="form-box register">
+			<h2>Register</h2>
+			<form action="#">
+				<div class="input-box">
+					<span class="icon">
+						<ion-icon name="person"></ion-icon>
+					</span>
+					<input id="username" type="text" required />
+					<label>Username</label>
+				</div>
+				<div class="input-box">
+					<span class="icon">
+						<ion-icon name="mail"></ion-icon>
+					</span>
+					<input id="email" type="email" required />
+					<label>Email</label>
+				</div>
+				<div class="input-box">
+					<span class="icon">
+						<ion-icon name="lock-closed"></ion-icon>
+					</span>
+					<input id="password" type="password" required />
+					<label>Password</label>
+				</div>
+				<div class="remember-forgot">
+					<label>
+						<input type="checkbox">Agree to Terms and Conditions
+					</label>
+				</div>
+				<button type="submit" class="btn" onclick="addData()">Register</button>
+				<div class="login-register">
+					<p>Already have an account?
+						<a href="#" class="login-link">Login</a>
+					</p>
+				</div>
+			</form>
+		</div>
+	</div>
+
+
+
+	<!-- <footer>
+		copyright michael goddard
+	</footer> -->
+
+	<script src="./js/main.js"></script>
+	<script src="./js/scroll.js"></script>
+	<script src="./js/login.js"></script>
+	<script src="./js/register.js"></script>
+	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>

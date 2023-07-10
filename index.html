@@ -12,24 +12,33 @@
 	<header>
 		<h2 class="logo">OSS</h2>
 		<nav class="navbar">
-			<a class="home-btn" href="#">Home</a>
-			<a class="about-btn" href="#">About</a>
-			<a class="software-btn" href="#">Software</a>
-			<a class="contact-btn" href="#">Contact</a>
-			<a class="contribute-btn" href="#">Contribute</a>
+			<li><a class="home-btn" href="#">Home</a></li>
+			<li><a class="software-btn" href="#">Software</a></li>
+			<li><a class="contact-btn" href="#">Contact</a></li>
+			<li><a class="contribute-btn" href="#">Contribute</a></li>
 			<button class="btn-login-popup">Login</button>
+			<div class="toggle-btn">
+				<ion-icon name="menu"></ion-icon>
+			</div>
 		</nav>
+		<div class="dropdown-menu">
+			<li><a class="home-btn" href="#">Home</a></li>
+			<li><a class="software-btn" href="#">Software</a></li>
+			<li><a class="contact-btn" href="#">Contact</a></li>
+			<li><a class="contribute-btn" href="#">Contribute</a></li>
+			<button class="btn-login-popup">Login</button>
+		</div>
 	</header>
 
-	<div class="landing">
+	<section class="hero">
 		<h1>Welcome!</h1>
-	</div>
+	</section>
 
-	<div class="main">
+	<section class="main">
 		<div class="about">
-			<h2>About Us</h2>
+			<h2>About</h2>
 		</div>
-	</div>
+	</section>
 
 	<div class="wrapper">
 		<span class="icon-close">
@@ -109,14 +118,19 @@
 
 
 
-	<!-- <footer>
-		copyright michael goddard
-	</footer> -->
+	<footer class="footer">
+		<h2>OSS</h2>
+		<div>&copy Michael Goddard 2023</div>
+		<div class="flexbox-container">
+			<div class="row">
+				<a href="#" class="item">Privacy Policy</a>
+				<a href="#" class="item">Security</a>
+				<a href="#" class="item">Legal Stuff</a>
+			</div>
+		</div>
+	</footer>
 
 	<script src="./js/main.js"></script>
-	<script src="./js/scroll.js"></script>
-	<script src="./js/login.js"></script>
-	<script src="./js/register.js"></script>
 	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>

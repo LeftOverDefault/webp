@@ -52,16 +52,18 @@ header {
 	top: 0;
 	left: 0;
 	width: 100%;
-	padding: 20px 100px;
+	padding: 20px 35px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	z-index: 99;
-	transition: 0.5s;
+	transition: 0.5s ease;
 }
 
 header.scrolled {
-	background: var(--900);
+	background: var(--800);
+	height: 70px;
+	transition: 0.5s;
 }
 
 header.scrolled .logo,
@@ -89,6 +91,15 @@ header.scrolled .navbar .btn-login-popup:hover {
 	color: var(--50);
 	user-select: none;
 	transition: 0.5s;
+}
+
+.navbar {
+	display: flex;
+	align-items: center;
+}
+
+.navbar li {
+	list-style: none;
 }
 
 .navbar a {
@@ -139,25 +150,95 @@ header.scrolled .navbar .btn-login-popup:hover {
 	color: var(--600);
 }
 
-.landing {
+.navbar .toggle-btn {
+	display: none;
+	color: var(--50);
+	font-size: 1.5em;
+	transition: 0.5s;
+}
+
+.dropdown-menu {
+	margin-top: 15px;
+	display: none;
+	position: absolute;
+	right: 2rem;
+	top: 60px;
+	width: 175px;
+	height: 0px;
+	background: transparent;
+	backdrop-filter: blur(2px);
+	border-radius: 6px;
+	overflow: hidden;
+	transition: height 0.5s ease;
+}
+
+.dropdown-menu.open {
+	border: 3px solid #52606D80;
+	height: 250px;
+}
+
+.dropdown-menu li {
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: height 0.5s ease;
+}
+
+.dropdown-menu a {
+	font-size: 1.1em;
+	color: var(--50);
+	text-decoration: none;
+	font-weight: 500;
+	transition: 0.5s ease;
+}
+
+.dropdown-menu a:hover {
+	color: var(--300);
+}
+
+.dropdown-menu .btn-login-popup {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 5%;
+	margin-right: 5%;
+	width: 90%;
+	height: 40px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background: transparent;
+	border: 2px solid var(--50);
+	border-radius: 6px;
+	cursor: pointer;
+	font-size: 1.1em;
+	color: var(--50);
+	font-weight: 500;
+	transition: 0.5s;
+}
+
+.dropdown-menu .btn-login-popup:hover {
+	background: var(--50);
+	color: var(--600);
+}
+
+.hero {
 	position: absolute;
 	text-align: center;
-	padding-top: 100px;
-	padding-bottom: 100px;
+	align-items: center;
+	justify-content: center;
 	z-index: 1;
 }
 
-.landing h1 {
+.hero h1 {
 	font-size: 3em;
 	font-weight: 600;
 	color: var(--50);
 }
 
 .main {
-	/* margin-left: 75px; */
-	/* margin-right: 75px; */
 	width: 90%;
-	height: 50vh;
+	height: 35vh;
 	border-radius: 5px;
 	background: var(--200);
 	box-shadow: 0 0 30px #000000A0;
@@ -172,11 +253,55 @@ header.scrolled .navbar .btn-login-popup:hover {
 	text-align: center;
 }
 
+.footer {
+	user-select: none;
+	top: 150vh;
+	box-shadow: 0px 0px 30px #000000A0;
+	background: var(--200);
+	padding-top: 10px;
+	color: var(--500);
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 10rem;
+	z-index: 2;
+	text-align: center;
+}
 
+.footer h2 {
+	padding-top: 15px;
+	color: var(--600);
+	text-align: center;
+}
 
+.footer .flexbox-container {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	justify-content: space-between;
+}
 
+.footer .row {
+	width: 450px;
+	display: flex;
+	flex: 1;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-size: 1em;
+}
 
+.footer .item {
+	flex: 1 1 auto;
+	text-decoration: none;
+	color: var(--600);
+}
 
+.footer .item+.item {
+	border-left: solid 1px var(--500);
+}
 
 .wrapper {
 	position: fixed;
@@ -361,4 +486,40 @@ header.scrolled .navbar .btn-login-popup:hover {
 
 .login-register p a:hover {
 	text-decoration: underline;
+}
+
+@media (max-width: 875px) {
+
+	.navbar a,
+	.navbar button {
+		display: none;
+	}
+
+	.navbar .toggle-btn {
+		display: block;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.dropdown-menu .btn-login-popup:hover {
+		background: var(--50);
+		color: var(--600);
+	}
+
+	.dropdown-menu {
+		display: block;
+	}
+}
+
+@media (max-width: 557px) {
+
+	.dropdown-menu {
+		left: 25px;
+		width: unset;
+	}
+
+	.dropdown-menu .btn-login-popup:hover {
+		background: var(--50);
+		color: var(--600);
+	}
 }

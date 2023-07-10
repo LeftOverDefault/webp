@@ -23,6 +23,7 @@ btnPopup.addEventListener("click", () => {
 
 dropdownBtnPopup.addEventListener("click", () => {
     dropdownMenu.classList.remove("open")
+    toggleBtnIcon.setAttribute("name", "menu");
     wrapper.classList.add("active-popup");
 });
 
@@ -59,6 +60,7 @@ function addData() {
     localStorage.setItem("userName", username);
     localStorage.setItem("userEmail", email);
     localStorage.setItem("userPassword", password);
+    alert("Registration Successful");
 }
 
 function checkData() {
@@ -78,3 +80,27 @@ function checkData() {
         alert("Login Failed, Incorrect email");
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

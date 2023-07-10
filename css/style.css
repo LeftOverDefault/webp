@@ -52,18 +52,19 @@ header {
 	top: 0;
 	left: 0;
 	width: 100%;
+	height: 100px;
+	background: transparent;
 	padding: 20px 35px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	z-index: 99;
+	z-index: 4;
 	transition: 0.5s ease;
 }
 
 header.scrolled {
-	background: var(--800);
-	height: 70px;
-	transition: 0.5s;
+	background: linear-gradient(to right, var(--900), var(--800));
+	height: 75px;
 }
 
 header.scrolled .logo,
@@ -83,7 +84,7 @@ header.scrolled .navbar .btn-login-popup {
 
 header.scrolled .navbar .btn-login-popup:hover {
 	background: var(--50);
-	color: var(--800);
+	color: var(--900);
 }
 
 .logo {
@@ -147,7 +148,7 @@ header.scrolled .navbar .btn-login-popup:hover {
 
 .navbar .btn-login-popup:hover {
 	background: var(--50);
-	color: var(--600);
+	color: var(--800);
 }
 
 .navbar .toggle-btn {
@@ -165,17 +166,24 @@ header.scrolled .navbar .btn-login-popup:hover {
 	top: 60px;
 	width: 175px;
 	height: 0px;
-	background: transparent;
-	backdrop-filter: blur(2px);
+	background: linear-gradient(to bottom, var(--900), var(--800));
+	backdrop-filter: blur(3px);
+	border: none;
 	border-radius: 6px;
 	overflow: hidden;
-	transition: height 0.5s ease;
+	transition: 0.5s ease-in-out;
 }
 
 .dropdown-menu.open {
-	border: 3px solid #52606D80;
+	border: 2px solid var(--600);
+	/* border: 3px solid #52606D80; */
 	height: 250px;
+
 }
+
+/* header.scrolled .dropdown-menu.open {
+	background: linear-gradient(var(--1000), var(--900));
+} */
 
 .dropdown-menu li {
 	padding: 10px;
@@ -238,7 +246,6 @@ header.scrolled .navbar .btn-login-popup:hover {
 
 .main {
 	width: 90%;
-	height: 35vh;
 	border-radius: 5px;
 	background: var(--200);
 	box-shadow: 0 0 30px #000000A0;
@@ -249,7 +256,7 @@ header.scrolled .navbar .btn-login-popup:hover {
 }
 
 .main .about {
-	padding: 25px 0 0 0;
+	padding: 25px 25px 25px 25px;
 	text-align: center;
 }
 
@@ -361,7 +368,7 @@ header.scrolled .navbar .btn-login-popup:hover {
 	right: 0;
 	width: 45px;
 	height: 45px;
-	background: var(--500);
+	background: var(--800);
 	font-size: 2em;
 	color: var(--50);
 	display: flex;
@@ -374,7 +381,7 @@ header.scrolled .navbar .btn-login-popup:hover {
 }
 
 .wrapper .icon-close:hover {
-	background: var(--700);
+	background: var(--900);
 }
 
 .form-box h2 {

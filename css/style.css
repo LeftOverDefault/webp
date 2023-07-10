@@ -260,6 +260,11 @@ header.scrolled .navbar .btn-login-popup:hover {
 	text-align: center;
 }
 
+.main .software-examples {
+	padding: 25px 25px 25px 25px;
+	text-align: center;
+}
+
 .footer {
 	user-select: none;
 	top: 150vh;

@@ -8,7 +8,6 @@ const dropdownMenu = document.querySelector(".dropdown-menu");
 const toggleBtn = document.querySelector(".toggle-btn");
 const toggleBtnIcon = document.querySelector(".toggle-btn ion-icon")
 
-
 registerLink.addEventListener("click", () => {
     wrapper.classList.add("active");
 });
@@ -80,27 +79,3 @@ function checkData() {
         alert("Login Failed, Incorrect email");
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

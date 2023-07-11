@@ -260,9 +260,21 @@ header.scrolled .navbar .btn-login-popup:hover {
 	text-align: center;
 }
 
-.main .software-examples {
-	padding: 25px 25px 25px 25px;
-	text-align: center;
+.container .row {
+	display: flex;
+	flex: 1;
+	gap: 10px 10px;
+	flex: 1;
+	flex-wrap: wrap;
+}
+
+.container .item {
+	position: relative;
+}
+
+.container img {
+	width: 250px;
+	border-radius: 6px;
 }
 
 .footer {

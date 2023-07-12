@@ -213,6 +213,7 @@ header.scrolled .navbar .btn-login-popup:hover {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    width: 100%;
     height: 75%;
 }
 

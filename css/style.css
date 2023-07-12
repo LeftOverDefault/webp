@@ -239,15 +239,14 @@ header.scrolled .navbar .btn-login-popup:hover {
 }
 
 .main {
-    overflow-x: hidden;
     background: var(--100);
     box-shadow: 0px 0px 30px #000000A0;
     margin-left: 50px;
     margin-right: 50px;
-    padding-left: 25px;
-    padding-top: 25px;
-    padding-right: 25px;
-    padding-bottom: 25px;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
     border-radius: 6px;
     text-align: center;
     color: var(--600);
@@ -256,12 +255,6 @@ header.scrolled .navbar .btn-login-popup:hover {
 }
 
 .main .features {
-    background: var(--200);
-    padding-bottom: 15px;
-    border-radius: 6px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 15px;
     margin-top: 0px;
     margin-bottom: 20px;
 }
@@ -269,35 +262,65 @@ header.scrolled .navbar .btn-login-popup:hover {
 .main .software {
     margin-top: 20px;
     margin-bottom: 20px;
-    background: var(--200);
     color: var(--600);
     border-radius: 6px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 15px;
-    padding-bottom: 15px;
 }
 
 .main .card-container {
     margin-top: 15px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 15px;
+    padding: 20px;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.main .card-container .card {
+    flex-grow: 1;
     position: relative;
-    gap: 15px 15px;
-    align-content: space-between;
-    justify-content: space-between;
-}
-
-.main .card {
+    text-align: center;
     background: transparent;
+    width: 300px;
+    height: 100%;
     flex: 0%;
+    transition: 0.5s ease;
 }
 
-.main .card img {
-    width: 210px;
+.main .card-container .card img {
+    box-shadow: 0px 0px 15px #000000A0;
+    filter: brightness(0.35) blur(1px);
+    display: block;
+    width: 100%;
     border-radius: 6px;
-    height: 100%;
+    transition: 0.5s ease;
+}
+
+.main .card-container .card div.card-text {
+    color: var(--500);
+    user-select: none;
+    font-size: x-large;
+    font-weight: 500;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s ease;
+}
+
+.main .card-container .card:hover {
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+.main .card-container .card img:hover {
+    filter: brightness(0.5) blur(0px);
+}
+
+.main .card-container .card .card-text:hover {
+    color: var(--200);
 }
 
 .footer {
@@ -577,13 +600,13 @@ header.scrolled .navbar .btn-login-popup:hover {
         transform: translateY(-10%);
     }
 
-    .main .card {
+    .main .card-container .card {
         flex: 40%;
     }
 
     .footer {
-        top: 225vh;
-        height: 500px;
+        top: 200vh;
+        height: 250px;
     }
 
     .footer hr {
@@ -625,9 +648,11 @@ header.scrolled .navbar .btn-login-popup:hover {
 
     .main {
         transform: translateY(-5%);
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
-    .main .card {
+    .main .card-container .card {
         flex: 100%;
     }
 
@@ -637,7 +662,7 @@ header.scrolled .navbar .btn-login-popup:hover {
 
     .footer {
         top: 300vh;
-        height: 235px;
+        height: 250px;
     }
 
     .footer hr {

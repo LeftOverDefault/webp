@@ -6,7 +6,11 @@ const dropdownBtnPopup = document.querySelector(".dropdown-menu .btn-login-popup
 const iconClose = document.querySelector(".icon-close");
 const dropdownMenu = document.querySelector(".dropdown-menu");
 const toggleBtn = document.querySelector(".toggle-btn");
-const toggleBtnIcon = document.querySelector(".toggle-btn ion-icon")
+const toggleBtnIcon = document.querySelector(".toggle-btn ion-icon");
+const card = document.querySelector(".card");
+const cardImg = document.querySelector(".card-img");
+const cardText = document.querySelector(".card-text");
+
 
 registerLink.addEventListener("click", () => {
     wrapper.classList.add("active");

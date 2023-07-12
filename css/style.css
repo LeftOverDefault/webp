@@ -583,6 +583,31 @@ header.scrolled .navbar .btn-login-popup:hover {
 
     .footer {
         top: 225vh;
+        height: 500px;
+    }
+
+    .footer hr {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .footer .flexbox-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        position: relative;
+        align-content: space-between;
+        justify-content: space-between;
+    }
+
+    .footer a.item {
+        flex: 100%;
+        text-decoration: none;
+        color: var(--600);
+    }
+
+    .footer a.item+a.item {
+        border-left: none;
     }
 }
 
@@ -625,7 +650,6 @@ header.scrolled .navbar .btn-login-popup:hover {
         flex-direction: row;
         flex-wrap: wrap;
         position: relative;
-        /* gap: 15px 15px; */
         align-content: space-between;
         justify-content: space-between;
     }
